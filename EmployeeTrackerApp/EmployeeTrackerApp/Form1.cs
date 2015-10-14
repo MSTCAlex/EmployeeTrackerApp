@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.IO;
 
 
 namespace EmployeeTrackerApp
@@ -16,6 +17,10 @@ namespace EmployeeTrackerApp
     {
         SqlConnection connection = new SqlConnection();
         SqlCommand cmd = new SqlCommand();
+        SqlParameter imageParam = new SqlParameter("@image", SqlDbType.Image);
+        Image img;
+        string pictureName;
+
 
         public Form1()
         {
@@ -30,6 +35,31 @@ namespace EmployeeTrackerApp
                 "AttachDbFilename="+connectionPath+"Integrated Security=True";
             cmd.Connection = connection;
 
+        }
+
+        //Capture Screenshots
+        public void Capture()
+        {
+            SendKeys.Send("{PRTSC}");
+            img = Clipboard.GetImage();
+            pictureName = DateTime.Now.ToString("ddmmyyhmmss");
+        }
+
+        //Save Picture into Database
+        public void SavePicture()
+        {
+            // save image from clipboard as data of bytes to be inserted into database
+            MemoryStream ms = new MemoryStream();
+            img.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            byte[] data = ms.ToArray();
+            ms.Close();
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@image", data);
+            cmd.CommandText = "insert into Screenshots (Name,Image) values ('"
+                + pictureName + "', @image)";
+            connection.Open();
+            cmd.ExecuteNonQuery();
+            connection.Close();
         }
 
 
