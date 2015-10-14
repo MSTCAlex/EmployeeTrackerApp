@@ -1,1 +1,11 @@
 C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\bin\Debug\EmployeeTrackerApp.exe.config
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\bin\Debug\EmployeeTracker.mdf
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\bin\Debug\EmployeeTracker_log.ldf
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\bin\Debug\EmployeeTrackerApp.exe
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\bin\Debug\EmployeeTrackerApp.pdb
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.csprojResolveAssemblyReference.cache
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.Form1.resources
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.Properties.Resources.resources
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.csproj.GenerateResource.Cache
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.exe
+C:\Users\dinan\Documents\GitHub\EmployeeTrackerApp\EmployeeTrackerApp\EmployeeTrackerApp\obj\Debug\EmployeeTrackerApp.pdb

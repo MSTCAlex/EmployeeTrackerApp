@@ -29,11 +29,20 @@ namespace EmployeeTrackerApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string connectionPath;
-            connectionPath = "C:\\Users\\dinan\\Documents\\GitHub\\EmployeeTrackerApp\\EmployeeTrackerApp\\EmployeeTrackerApp\\EmployeeTracker.mdf";
-            connection.ConnectionString = @"Data Source=(LocalDB)\v11.0;"+
-                "AttachDbFilename="+connectionPath+"Integrated Security=True";
+            string connectionPath = Application.StartupPath;
+            connection.ConnectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename="+connectionPath+"\\EmployeeTracker.mdf;Integrated Security=True";
             cmd.Connection = connection;
+            int waitMinutes;
+
+            while (true)
+            {
+                waitMinutes = WaitforMinutes();
+                System.Threading.Thread.Sleep(waitMinutes * 1000);
+                Capture();
+                SavePicture();
+                System.Threading.Thread.Sleep(1000);
+            }
+            
 
         }
 
@@ -62,6 +71,14 @@ namespace EmployeeTrackerApp
             connection.Close();
         }
 
+        //Generate Random Number between 1 and 600 (equivalent to 10 minutes)
+        public int WaitforMinutes()
+        {
+            int rndNum;
+            Random rnd = new Random();
+            rndNum = rnd.Next(1, 600);
+            return rndNum;
+        }
 
     }
 }
